@@ -25,7 +25,7 @@ function unityShowBanner(msg, type) {
   updateBannerVisibility();
 }
 
-var buildUrl = "../../../Build";
+var buildUrl = "/webgl/FPS-microgame";
 var loaderUrl = buildUrl + "/WebGL Builds.loader.js";
 var config = {
   dataUrl: buildUrl + "/WebGL Builds.data",
