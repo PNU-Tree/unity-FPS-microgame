@@ -1,7 +1,6 @@
 class CustomHeader extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -10,14 +9,14 @@ class CustomHeader extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
+    this.innerHTML = `
       <style>
         header {
           border-bottom: 0.01rem solid #888;
         }
         #game-div {
           display: flex;
-          gap: 1rem;
+          gap: 1.25rem;
         }
         .hidden { display: none; }
       </style>
@@ -39,6 +38,9 @@ class CustomHeader extends HTMLElement {
           <div id="game-div">
             <a id="play-game" href="/play">게임 실행</a>
             <a id="rank" href="/rank">랭킹</a>
+            <a id="sign-out" href="/sign-out">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
           </div>
         </div>
       </header>
@@ -46,12 +48,13 @@ class CustomHeader extends HTMLElement {
   }
 
   updateDisplay() {
-    const auth = localStorage.getItem("auth");
+    const authStr = localStorage.getItem("auth");
+    const auth = JSON.parse(authStr);
 
-    const signDiv = this.shadowRoot.getElementById("sign-div");
-    const gameDiv = this.shadowRoot.getElementById("game-div");
+    const signDiv = this.querySelector("#sign-div");
+    const gameDiv = this.querySelector("#game-div");
 
-    if (auth === null) {
+    if ( !auth.token ) {
       gameDiv.style.display = "none";
     } else {
       signDiv.style.display = "none";

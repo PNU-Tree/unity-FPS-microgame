@@ -12,6 +12,10 @@ signInForm.addEventListener("submit", (e) => {
   if (ret) return;
 
   // TODO: 로그인 api 연결
+  const json = {token: "Bearer~~~", playerId: 10, nickname: "김병철"}
+  localStorage.setItem("auth", JSON.stringify(json));
+
+  location.replace("/");
 });
 
 nicknameInput.addEventListener("blur", validateNickname);
@@ -39,10 +43,10 @@ function validateNickname(e) {
 }
 
 function isWrongNickname(nickname) {
-  const regex = /^[a-zA-Z가-힣]{6,20}$/;
+  const regex = /^[a-zA-Z가-힣]{2,20}$/;
 
   if (!regex.test(nickname))
-    return "닉네임은 6자에서 20자 이내의 한글, 영어만 가능합니다.";
+    return "닉네임은 2자에서 20자 이내의 한글, 영어만 가능합니다.";
 }
 
 function validatePassword(e) {
