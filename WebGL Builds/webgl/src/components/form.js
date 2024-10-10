@@ -35,9 +35,12 @@ class CustomForm extends HTMLElement {
           border: 0.05rem solid #aaa;
           border-radius: 8px;
         }
+        #form-btn {
+          background-color: #343a55;
+          box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.4);
+        }
         #form-btn:hover {
-          background-color: #333;
-          color: #ddd;
+          background-color: #0d101f;
           box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.4);
         }
         .error-text { color: #ff9999; }

@@ -21,7 +21,7 @@ class CustomHeader extends HTMLElement {
         .hidden { display: none; }
       </style>
       <link rel="stylesheet" href="../globals.css" />
-      <header style="padding: 1rem 10%; display: flex; justify-content: space-between;">
+      <header style="padding: 1rem 10%; display: flex; justify-content: space-between; background-color: rgba(0, 0, 0, 0.2);">
         <a href="/" id="logo" style="display: flex; align-items: center; gap: 0.5rem">
           <img
             src="https://avatars.githubusercontent.com/u/175100970?s=200&v=4"
