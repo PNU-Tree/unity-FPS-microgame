@@ -54,7 +54,7 @@ class CustomHeader extends HTMLElement {
     const signDiv = this.querySelector("#sign-div");
     const gameDiv = this.querySelector("#game-div");
 
-    if ( !auth.token ) {
+    if ( !auth || !auth?.token ) {
       gameDiv.style.display = "none";
     } else {
       signDiv.style.display = "none";
