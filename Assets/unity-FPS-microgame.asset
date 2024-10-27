@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8ba17751ad4107a50fa1415017b6b1, type: 3}
   m_Name: unity-FPS-microgame
   m_EditorClassIdentifier: 
-  automaticStreaming: 0
+  automaticStreaming: 1
   signalingSettings:
     rid: 6164069515290214400
   references:
@@ -21,7 +21,7 @@ MonoBehaviour:
     - rid: 6164069515290214400
       type: {class: WebSocketSignalingSettings, ns: Unity.RenderStreaming, asm: Unity.RenderStreaming}
       data:
-        m_url: ws://127.0.0.1
+        m_url: ws://127.0.0.1:7001
         m_iceServers:
         - m_urls:
           - stun:stun.l.google.com:19302
