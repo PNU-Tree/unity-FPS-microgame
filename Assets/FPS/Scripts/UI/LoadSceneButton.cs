@@ -9,6 +9,10 @@ namespace Unity.FPS.UI
     {
         public string SceneName = "";
 
+        private void Start() {
+            SceneManager.LoadScene(SceneName);
+        }
+
         void Update()
         {
             if (EventSystem.current.currentSelectedGameObject == gameObject
