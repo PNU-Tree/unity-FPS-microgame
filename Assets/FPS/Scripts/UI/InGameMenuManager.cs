@@ -77,18 +77,18 @@ namespace Unity.FPS.UI
                 Cursor.visible = true;
             }
 
-            if (((KeyControl)Keyboard.current[GameConstants.k_ButtonNamePauseMenu]).wasPressedThisFrame
-                || (MenuRoot.activeSelf && ((KeyControl)Keyboard.current[GameConstants.k_ButtonNameCancel]).wasPressedThisFrame))
-            {
-                if (ControlImage.activeSelf)
-                {
-                    ControlImage.SetActive(false);
-                    return;
-                }
+            // if (((KeyControl)Keyboard.current[GameConstants.k_ButtonNamePauseMenu]).wasPressedThisFrame
+            //     || (MenuRoot.activeSelf && ((KeyControl)Keyboard.current[GameConstants.k_ButtonNameCancel]).wasPressedThisFrame))
+            // {
+            //     if (ControlImage.activeSelf)
+            //     {
+            //         ControlImage.SetActive(false);
+            //         return;
+            //     }
 
-                SetPauseMenuActivation(!MenuRoot.activeSelf);
+            //     SetPauseMenuActivation(!MenuRoot.activeSelf);
 
-            }
+            // }
             
             if (Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.sKey.wasPressedThisFrame)
             {
